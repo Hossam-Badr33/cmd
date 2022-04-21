@@ -1,0 +1,72 @@
+to open cmd:
+a- shift + right_click --> it will appear in right_click if u open it will open in current_path.
+b-cmd then open from start menu --> user
+c-cmd then run as adminitrator  --> administrator
+1- dir   ---> to view every folder and file inside directory with some informations    . means current dir and .. means parent dir
+
+ Help dir   --> to view all parameters inside dir u can choose 1 of them to use for example
+ dir /ON --> sort by name   and so on
+------------------------------------------------------------
+2-cd   --> change directory
+cd ..               getback to parent dir
+cd Desktop          go to Desktop
+cd "path"           go certain folder 1-time code line
+cd folder_name      go to any folder in Desktop
+cd Desktop\Folder_Name  go in 1-step to any folder in Desktop
+cd partition_name:    to go certain partition
+------------------------------------------------------------
+3-mkdir   --> to create empty folder
+  mkdir "path\new folder name" to create folder there
+------------------------------------------------------------
+4-rmdir      --> to delete empty folder
+   rmdir /S folder_name  --> to delete non-empty folder
+   rmdir /S "path\folder u wanaa delete"
+------------------------------------------------------------
+5-move file_name path  ---> to move files
+------------------------------------------------------------
+6-copy file_u_want new_file_name path --> copy files if u don't determine path it copy to same folder
+------------------------------------------------------------
+7-ren file_name or file_path  new_file_name --> to change file_name
+------------------------------------------------------------
+8-del file_name file_name .... --> to delete only files not folders
+  del *chat   --> will delete any files start with chat inside folder
+------------------------------------------------------------
+9-echo any_text > file_name  -->create and write any_text in that file 
+if file_name already exist will override it's content
+ echo any_text >> file_name  --> will add another text without override old text
+ echo. > file_name --> will only create empty_file
+
+    a-file_name         --> will open file in windows
+    b-type file_name    --> will show file content in cmd
+ ------------------------------------------------------------
+ 10-combining commands 
+    a- &&  --> command1&&command2 : only runs second command if first runs successfully
+    b- & --> command1&command2 : runs second command regardless first command return error or not
+    c- || --> command1||command2 : runs second command if first command fails
+    d-| --> command1|command2 : redirects output of first command to second one.
+    ex: echo hello world | clip    if u right-click u can paste hello world any place
+    e- && || multiple combine as u wish:
+    command1&&command2||command3
+    if command1 runs good command2 will be run if not command3 will be run instead
+    ------------------------------------------------------------
+    11-launch apps/prog
+     a- internal commands like echo or cd
+     b-file.exe or "path\file.exe"
+     c-Start "" "path\file.exe"   note if path contain spaces u msut add empty "" after start
+     d-Set variable_name="path\file.exe"
+     then Start variable_name
+    ------------------------------------------------------------
+    12-manage tasks
+        a- systeminfo  or systeminfo -v 
+        --> give all information about your system
+        b-tasklist or tasklist -v 
+        --> give all informations about running prog on pc
+        c-taskkill -im file.exe  or taskkill -pid idNumberOfRunningProcess or taskkill /F -im or -pid
+        --> stop runing process on your computer
+        d-tree --> will give u infrastructure of dir
+        e-fc file_name another_file_name
+        --> view differences between 2 files
+    ------------------------------------------------------------
+    13-cls --> clear screen
+    ------------------------------------------------------------
+    14-exit --> close cmd
